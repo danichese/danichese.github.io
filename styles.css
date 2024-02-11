@@ -1,4 +1,7 @@
 body {
-  background-color: Blue;
-  color: white;
+  background-color: aliceblue;
+  color: blue;
 }
+.social-link img {
+  width: 32px;           /* Sets icon size */
+  height: 32px;   }
