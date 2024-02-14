@@ -5,3 +5,7 @@ body {
 .social-link img {
   width: 32px;          
   height: 32px;   }
+
+footer  {
+  background-color: lightblue;
+}
