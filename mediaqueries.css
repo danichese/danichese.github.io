@@ -1,0 +1,8 @@
+ @media screen and (max-width: 1200px) { /* This ensures the correct nav is displayed based on desktop/mobile  */
+    #desktop-nav {
+        display: none;
+    }
+    #hamburger-nav {
+        display: flex;
+    }
+}
