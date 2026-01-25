@@ -29,13 +29,13 @@ describe('Home', () => {
   it('renders the About section', () => {
     render(<Home />)
     expect(screen.getByText(/About Me/i)).toBeInTheDocument()
-    expect(screen.getAllByText(/5\+ Years/i).length).toBeGreaterThan(0)
-    expect(screen.getAllByText(/ITIL Service Management/i).length).toBeGreaterThan(0)
+    expect(screen.getAllByText(/8\+ Years/i).length).toBeGreaterThan(0)
+    expect(screen.getAllByText(/App Support & ITIL Management/i).length).toBeGreaterThan(0)
   })
 
   it('renders the Projects section with featured projects', () => {
     render(<Home />)
-    expect(screen.getByText(/Featured Projects/i)).toBeInTheDocument()
+    expect(screen.getByText(/Featured Products/i)).toBeInTheDocument()
     expect(screen.getByText('PSP-Lab')).toBeInTheDocument()
     expect(screen.getByText('Security Service Decomposition')).toBeInTheDocument()
   })
@@ -49,6 +49,6 @@ describe('Home', () => {
   it('renders the Contact section', () => {
     render(<Home />)
     expect(screen.getByText(/Contact Me/i)).toBeInTheDocument()
-    expect(screen.getByText(/LinkedIn/i)).toBeInTheDocument()
+    expect(screen.getAllByText(/LinkedIn/i).length).toBeGreaterThan(0)
   })
 })

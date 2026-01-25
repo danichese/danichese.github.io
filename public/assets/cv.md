@@ -5,30 +5,36 @@ Manchester, UK | daniel.cheeseman6@gmail.com | [LinkedIn](https://www.linkedin.c
 ---
 
 ### PROFESSIONAL SUMMARY
-Innovative **AI-Assisted Full Stack Developer** with over 8 years of experience in Application Support, FinTech, and SaaS environments. I specialize in bridging the gap between complex technical infrastructure and user-centric product solutions by leveraging advanced AI tools (Gemini, Cursor, Copilot). I transform my deep expertise in API troubleshooting, service decomposition, and technical writing into high-velocity product development, building scalable web applications with production-grade reliability.
+Innovative **AI-Assisted Full Stack Developer** with over 8 years of experience in Application Support, FinTech, and SaaS environments. I specialize in leveraging advanced AI tools (Gemini CLI, Conductor, Cursor) to build complex technical products with high velocity. My workflow demonstrates how AI agents can enable rapid product delivery, transforming deep expertise in API troubleshooting and service management into production-grade software development.
 
 ---
 
 ### TECHNICAL SKILLS & AI TOOLKIT
+- **AI-Assisted Development:** Gemini CLI, Conductor Methodology (Spec-driven development), AI-driven code generation and architectural decomposition.
 - **Development:** React, Next.js, TypeScript, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS.
 - **Backend & APIs:** Node.js, Express, RESTful APIs (Postman), JSON/XML, Webhooks, SQL.
-- **AI-Assisted Workflow:** High-velocity code generation, LLM-driven architectural analysis, and automated test suite orchestration.
 - **Infrastructure:** Microsoft Azure (Admin), Docker, AWS (Basics), Windows Server, VDI.
 - **Methodologies:** ITIL (Incident/Problem/Change), Service Design (SABSA/NIST), Technical Writing.
 
 ---
 
-### FEATURED AI-DRIVEN PRODUCTS
+### FEATURED AI-DRIVEN PRODUCTS (Demonstration of Capability)
+*The following projects illustrate my ability to build diverse, AI-accelerated technical products using the Gemini CLI and Conductor.*
+
+#### **Portfolio Site Migration** | [GitHub](https://github.com/danichese)
+*Lead Developer*
+- Migrated this portfolio from static HTML to Next.js 15+ using a fully AI-assisted workflow.
+- **AI Impact:** Used Conductor to scaffold, implement, and verify every task, demonstrating the speed and reliability of AI agent-led development.
 
 #### **PSP-Lab** | [GitHub](https://github.com/danichese/PSP-Lab)
-*Lead Developer*
-- Architected a comprehensive testing laboratory for Payment Service Provider integrations using Next.js.
-- **AI Impact:** Utilized AI to rapidly generate payment state machine logic and complex data validation layers, accelerating the prototype-to-production cycle by 60%.
+*Lead Developer (WIP)*
+- Architecting a laboratory for Payment Service Provider integrations using the Gemini CLI for rapid logic generation.
+- **AI Impact:** Reducing manual coding effort by using AI to generate complex payment state machine logic and validation layers.
 
 #### **Security Service Decomposition** | [GitHub](https://github.com/danichese/Security-Service-Decomposition-)
-*Architect & Developer*
-- Orchestrated the decomposition of monolithic security services into a modern microservices architecture.
-- **AI Impact:** Leveraged LLMs to analyze legacy code patterns and map secure service boundaries aligned with NIST and ITIL principles.
+*Architect & Developer (WIP)*
+- Managing the transition from monolithic to microservice architecture using Conductor's spec-driven framework.
+- **AI Impact:** Mapping secure service boundaries aligned with NIST and ITIL principles through AI-driven architectural analysis.
 
 ---
 
@@ -43,7 +49,6 @@ Innovative **AI-Assisted Full Stack Developer** with over 8 years of experience 
 *Aug 2022 – Dec 2023*
 - Provided 24/7 on-call support for critical payment infrastructure, managing high-pressure outages for Platinum-tier clients.
 - Developed a trend analysis dashboard that successfully increased transaction approval rates from 76% to 93%.
-- Standardized technical documentation for API integrations, reducing client onboarding time by 30%.
 
 #### **Sr. Systems Engineer** | Bank of America
 *Dec 2020 – Apr 2022*
