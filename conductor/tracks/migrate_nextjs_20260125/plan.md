@@ -17,7 +17,7 @@
     - [ ] Update messaging to "AI Full Stack Developer."
 - [ ] Task: Conductor - User Manual Verification 'Core Layout & Navigation' (Protocol in workflow.md)
 
-## Phase 3: Project Showcase & Content
+## Phase 3: Project Showcase & Content [checkpoint: 08db767]
 - [x] Task: Hero Project Integration (48f8957)
     - [ ] Implement cards/sections for `PSP-Lab` and `Security-Service-Decomposition`.
     - [ ] Add narrative sections explaining the AI-assisted workflow for these projects.

@@ -37,7 +37,7 @@ export default function Home() {
       <section id="profile" className="flex min-h-[90vh] flex-col items-center justify-center gap-12 md:flex-row md:gap-20">
         <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-tech shadow-[0_0_20px_rgba(0,242,255,0.3)] md:h-80 md:w-80">
           <Image
-            src="/assets/profile-pic.png"
+            src="/assets/profile-pic-new.jpg"
             alt="Dan Cheeseman"
             fill
             className="object-cover"
