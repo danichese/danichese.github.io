@@ -1,0 +1,14 @@
+I need to pull the original portfolio site and reposture as I AI Full stack developer. 
+
+This will use conductor to review the brownfield site, update with the latest projects: 
+
+
+https://github.com/danichese/PSP-Lab
+
+https://github.com/danichese/Security-Service-Decomposition-
+
+And it will update the portfolio site to reflect my change in direction
+
+I am planning to be a AI assisted coder and this should demonstrate how I am able to use the latest tools to create products. 
+
+Finally a new markdown file should be created which reflects my CV that I can use to start applying for web development jobs. 
