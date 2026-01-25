@@ -26,8 +26,8 @@
     - [ ] Implement a download link for the generated CV.
 - [ ] Task: Conductor - User Manual Verification 'Project Showcase & Content' (Protocol in workflow.md)
 
-## Phase 4: Final Polish & Deployment
+## Phase 4: Final Polish & Deployment [checkpoint: 47f826c]
 - [x] Task: SEO & Metadata Optimization. (d13efc4)
-- [ ] Task: Final Responsive Audit.
-- [ ] Task: Deploy to GitHub Pages.
-- [ ] Task: Conductor - User Manual Verification 'Final Polish & Deployment' (Protocol in workflow.md)
+- [x] Task: Final Responsive Audit. (47f826c)
+- [x] Task: Deploy to GitHub Pages. (47f826c)
+- [x] Task: Conductor - User Manual Verification 'Final Polish & Deployment' (Protocol in workflow.md)
