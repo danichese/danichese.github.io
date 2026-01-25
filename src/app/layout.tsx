@@ -14,8 +14,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dan Cheeseman | AI Full Stack Developer",
-  description: "Portfolio of Dan Cheeseman, an AI-Assisted Full Stack Developer specializing in modern web solutions.",
+  title: "Dan Cheeseman | AI-Assisted Full Stack Developer",
+  description: "Portfolio of Dan Cheeseman, an AI-Assisted Full Stack Developer specializing in modern web solutions built with Gemini CLI and Conductor.",
+  openGraph: {
+    title: "Dan Cheeseman | AI-Assisted Full Stack Developer",
+    description: "8+ years of App Support & ITIL Management transitioned into high-velocity AI-driven product development.",
+    url: "https://danichese.github.io",
+    siteName: "Dan Cheeseman Portfolio",
+    images: [
+      {
+        url: "/assets/profile-pic-new.jpg",
+        width: 800,
+        height: 800,
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dan Cheeseman | AI-Assisted Full Stack Developer",
+    description: "High-velocity product development using Gemini CLI and Conductor methodology.",
+    images: ["/assets/profile-pic-new.jpg"],
+  },
 };
 
 export default function RootLayout({
