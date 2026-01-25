@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import * as motion from "framer-motion/client"
 
 interface ProjectProps {
   title: string
@@ -12,7 +13,11 @@ interface ProjectProps {
 
 const ProjectCard = ({ title, description, aiNarrative, techStack, githubUrl, imageUrl }: ProjectProps) => {
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/50 p-6 transition-all hover:border-tech/50">
+    <motion.div 
+      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/50 p-6"
+      whileHover={{ y: -5, borderColor: "rgba(0, 242, 255, 0.5)" }}
+      transition={{ duration: 0.3 }}
+    >
       <div className="relative mb-6 h-48 w-full overflow-hidden rounded-xl">
         <Image
           src={imageUrl}
@@ -49,7 +54,7 @@ const ProjectCard = ({ title, description, aiNarrative, techStack, githubUrl, im
           </svg>
         </Link>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
