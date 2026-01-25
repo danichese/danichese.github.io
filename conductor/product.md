@@ -13,7 +13,7 @@ To transform the existing portfolio into a showcase for an "AI-Assisted Full Sta
     -   Highlight the transition from Knowledge/Technical Writing to Engineering, showing how AI expands the technical toolkit.
 
 2.  **Project Showcase:**
-    -   **Hero Projects:** Feature `PSP-Lab` and `Security-Service-Decomposition` at the top.
+    -   **Hero Projects:** Feature `Portfolio Site Migration`, `PSP-Lab`, and `Security-Service-Decomposition` at the top.
     -   **Narrative Focus:** Each project will explain *how* AI was used to solve problems and build features that would have been time-consuming or difficult with manual methods.
     -   **Tech Integration:** Explicitly mention the stack and AI tools used (Gemini, Cursor, Copilot).
 

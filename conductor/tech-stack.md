@@ -2,6 +2,7 @@
 
 ## Core Technologies
 -   **Framework:** Next.js (React)
+    -   *Libraries:* `React-Markdown`, `Lucide-React`
     -   *Rationale:* Provides a robust, full-stack foundation with server-side rendering (SSR) or static site generation (SSG) capabilities, perfect for a high-performance portfolio.
 -   **Styling:** Tailwind CSS
     -   *Rationale:* Rapid UI development with a utility-first approach, ensuring a clean, modern aesthetic that is easily maintainable.
