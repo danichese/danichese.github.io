@@ -11,16 +11,16 @@
     - [x] Optimize images and assets for performance.
 - [x] Task: Conductor - User Manual Verification 'Codebase Audit & Refactoring' (Protocol in workflow.md)
 
-## Phase 2: Documentation Overhaul
-- [ ] Task: Draft Migration Narrative
-    - [ ] Write the "Before vs. After" section for the README.
-    - [ ] Document the tech stack choices (Next.js, Tailwind, TypeScript).
-- [ ] Task: Document AI-Assisted Workflow
-    - [ ] Describe the role of Conductor and Gemini CLI.
-    - [ ] Explain the CI/CD pipeline and testing strategy.
-- [ ] Task: Finalize README.md
-    - [ ] Assemble all sections into a polished, professional README.
-- [ ] Task: Conductor - User Manual Verification 'Documentation Overhaul' (Protocol in workflow.md)
+## Phase 2: Documentation Overhaul [checkpoint: 894e406]
+- [x] Task: Draft Migration Narrative
+    - [x] Write the "Before vs. After" section for the README.
+    - [x] Document the tech stack choices (Next.js, Tailwind, TypeScript).
+- [x] Task: Document AI-Assisted Workflow
+    - [x] Describe the role of Conductor and Gemini CLI.
+    - [x] Explain the CI/CD pipeline and testing strategy.
+- [x] Task: Finalize README.md
+    - [x] Assemble all sections into a polished, professional README.
+- [x] Task: Conductor - User Manual Verification 'Documentation Overhaul' (Protocol in workflow.md)
 
 ## Phase 3: UI/UX Polish & Animations
 - [ ] Task: Install Animation Library
