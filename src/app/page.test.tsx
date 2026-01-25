@@ -16,7 +16,7 @@ describe('Home', () => {
     render(<Home />)
     const img = screen.getByAltText(/Dan Cheeseman/i)
     expect(img).toBeInTheDocument()
-    expect(img).toHaveAttribute('src', expect.stringContaining('profile-pic.png'))
+    expect(img).toHaveAttribute('src', expect.stringContaining('profile-pic-new.jpg'))
   })
 
   it('renders the CV download link', () => {
@@ -30,7 +30,7 @@ describe('Home', () => {
     render(<Home />)
     expect(screen.getByText(/About Me/i)).toBeInTheDocument()
     expect(screen.getAllByText(/8\+ Years/i).length).toBeGreaterThan(0)
-    expect(screen.getAllByText(/App Support & ITIL Management/i).length).toBeGreaterThan(0)
+    expect(screen.getAllByText(/App Support & Service Management/i).length).toBeGreaterThan(0)
   })
 
   it('renders the Projects section with featured projects', () => {

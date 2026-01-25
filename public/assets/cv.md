@@ -14,7 +14,7 @@ Innovative **AI-Assisted Full Stack Developer** with over 8 years of experience 
 - **Development:** React, Next.js, TypeScript, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS.
 - **Backend & APIs:** Node.js, Express, RESTful APIs (Postman), JSON/XML, Webhooks, SQL.
 - **Infrastructure:** Microsoft Azure (Admin), Docker, AWS (Basics), Windows Server, VDI.
-- **Methodologies:** ITIL (Incident/Problem/Change), Service Design (SABSA/NIST), Technical Writing.
+- **Methodologies:** Service Design (NIST CSF), Technical Writing, Incident Management.
 
 ---
 
@@ -64,8 +64,7 @@ Innovative **AI-Assisted Full Stack Developer** with over 8 years of experience 
 ### EDUCATION & CERTIFICATIONS
 - **Career Essentials in Generative AI** | Microsoft & LinkedIn
 - **BTEC National Diploma in ICT** | Stockport College
-- **ITIL Foundation Certification**
-- **SABSA Security Architecture (Basics)**
+- **Training:** Intensive Full Stack Web Development, Generative AI & Machine Learning Workflows.
 
 ---
 

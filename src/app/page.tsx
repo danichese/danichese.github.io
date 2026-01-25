@@ -88,7 +88,7 @@ export default function Home() {
               <Image src="/assets/experience.png" alt="Experience" width={24} height={24} />
             </div>
             <h3 className="mt-4 text-xl font-bold">Experience</h3>
-            <p className="mt-2 text-zinc-400">8+ Years <br /> App Support & ITIL Management</p>
+            <p className="mt-2 text-zinc-400">8+ Years <br /> App Support & Service Management</p>
           </div>
           <div className="flex flex-1 flex-col justify-center rounded-2xl border border-white/10 bg-zinc-900/30 p-8 text-center">
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-tech/10 text-tech">

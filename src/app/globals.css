@@ -24,3 +24,47 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+/* Print Styles for PDF Generation */
+@media print {
+  header, footer, section:not(#cv), .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  #cv {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  #cv > div {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .prose {
+    color: black !important;
+    max-width: none !important;
+  }
+
+  .prose h1, .prose h2, .prose h3 {
+    color: black !important;
+  }
+
+  .prose a {
+    color: #0066cc !important;
+    text-decoration: underline !important;
+  }
+
+  .prose hr {
+    border-color: #ddd !important;
+  }
+}
