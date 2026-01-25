@@ -10,7 +10,7 @@
     - [ ] Configure Tailwind with custom colors for "Futuristic/Human" aesthetic.
 - [ ] Task: Conductor - User Manual Verification 'Foundation & Scaffolding' (Protocol in workflow.md)
 
-## Phase 2: Core Layout & Navigation
+## Phase 2: Core Layout & Navigation [checkpoint: 085b60d]
 - [x] Task: Implement Responsive Navigation (9dd9e26)
     - [ ] Create Desktop and Mobile (Hamburger) nav components.
 - [x] Task: Implement Hero Section (9ca80f5)
