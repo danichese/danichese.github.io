@@ -4,7 +4,7 @@
 - [x] Task: Initialize Next.js Project (be61a98)
     - [ ] Run `npx create-next-app@latest` with TS, Tailwind, and App Router.
     - [ ] Configure `next.config.js` for static export (GitHub Pages compatibility).
-- [ ] Task: Asset Migration
+- [x] Task: Asset Migration (a92f62e)
     - [ ] Move existing assets from `danichese.github.io/assets` to `public/assets`.
 - [ ] Task: Global Styles & Theme
     - [ ] Configure Tailwind with custom colors for "Futuristic/Human" aesthetic.
