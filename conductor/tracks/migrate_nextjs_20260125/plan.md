@@ -1,7 +1,7 @@
 # Implementation Plan: Portfolio Migration
 
 ## Phase 1: Foundation & Scaffolding
-- [~] Task: Initialize Next.js Project
+- [x] Task: Initialize Next.js Project (be61a98)
     - [ ] Run `npx create-next-app@latest` with TS, Tailwind, and App Router.
     - [ ] Configure `next.config.js` for static export (GitHub Pages compatibility).
 - [ ] Task: Asset Migration
