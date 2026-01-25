@@ -2,9 +2,23 @@ import { render, screen } from '@testing-library/react'
 import Home from './page'
 
 describe('Home', () => {
-  it('renders the name Dan Cheeseman', () => {
+  it('renders the hero section with name and role', () => {
     render(<Home />)
-    const name = screen.getByText(/Dan Cheeseman/i)
-    expect(name).toBeInTheDocument()
+    expect(screen.getByText(/Dan Cheeseman/i)).toBeInTheDocument()
+    expect(screen.getByText(/AI-Assisted Full Stack Developer/i)).toBeInTheDocument()
+  })
+
+  it('renders the profile image', () => {
+    render(<Home />)
+    const img = screen.getByAltText(/Dan Cheeseman/i)
+    expect(img).toBeInTheDocument()
+    expect(img).toHaveAttribute('src', expect.stringContaining('profile-pic.png'))
+  })
+
+  it('renders the CV download link', () => {
+    render(<Home />)
+    const link = screen.getByText(/Download CV/i)
+    expect(link).toBeInTheDocument()
+    expect(link.closest('a')).toHaveAttribute('href', expect.stringContaining('.pdf'))
   })
 })

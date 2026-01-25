@@ -1,51 +1,53 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center font-sans">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
+    <main className="flex min-h-screen flex-col items-center justify-center px-6 pt-20">
+      {/* Hero Section */}
+      <section id="profile" className="flex flex-col items-center gap-12 md:flex-row md:gap-20">
+        <div className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-tech shadow-[0_0_20px_rgba(0,242,255,0.3)] md:h-80 md:w-80">
+          <Image
+            src="/assets/profile-pic.png"
+            alt="Dan Cheeseman"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <p className="text-xl font-medium text-human">Hello, I'm</p>
+          <h1 className="mt-2 text-5xl font-bold tracking-tight text-foreground md:text-7xl">
             Dan Cheeseman
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+          <p className="mt-4 text-2xl font-semibold text-zinc-400">
             AI-Assisted Full Stack Developer
           </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
+            <Link
+              href="/assets/Dan-Cheeseman-CV-INC-2024.pdf"
+              target="_blank"
+              className="rounded-full border border-tech px-8 py-3 font-semibold text-tech transition-all hover:bg-tech hover:text-black"
+            >
+              Download CV
+            </Link>
+            <Link
+              href="#contact"
+              className="rounded-full bg-foreground px-8 py-3 font-semibold text-background transition-all hover:bg-zinc-300"
+            >
+              Contact Info
+            </Link>
+          </div>
+          <div className="mt-8 flex gap-6">
+            <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+              <Image src="/assets/linkedin.png" alt="LinkedIn" width={32} height={32} className="opacity-70 hover:opacity-100" />
+            </Link>
+            <Link href="https://github.com/danichese" target="_blank" aria-label="GitHub">
+              <Image src="/assets/github.png" alt="GitHub" width={32} height={32} className="opacity-70 hover:opacity-100" />
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
