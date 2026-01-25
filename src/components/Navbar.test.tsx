@@ -4,8 +4,8 @@ import Navbar from './Navbar'
 describe('Navbar', () => {
   it('renders the name Dan Cheeseman', () => {
     render(<Navbar />)
-    const logo = screen.getByText(/Dan Cheeseman/i)
-    expect(logo).toBeInTheDocument()
+    const logos = screen.getAllByText(/Dan Cheeseman/i)
+    expect(logos.length).toBeGreaterThan(0)
   })
 
   it('renders navigation links', () => {
