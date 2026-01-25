@@ -21,7 +21,7 @@
 - [x] Task: Hero Project Integration (48f8957)
     - [ ] Implement cards/sections for `PSP-Lab` and `Security-Service-Decomposition`.
     - [ ] Add narrative sections explaining the AI-assisted workflow for these projects.
-- [ ] Task: Markdown CV Implementation
+- [x] Task: Markdown CV Implementation (8586c04)
     - [ ] Create a Markdown parser/component to render the new CV.
     - [ ] Implement a download link for the generated CV.
 - [ ] Task: Conductor - User Manual Verification 'Project Showcase & Content' (Protocol in workflow.md)
