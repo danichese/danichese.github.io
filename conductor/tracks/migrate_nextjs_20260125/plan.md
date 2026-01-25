@@ -18,7 +18,7 @@
 - [ ] Task: Conductor - User Manual Verification 'Core Layout & Navigation' (Protocol in workflow.md)
 
 ## Phase 3: Project Showcase & Content
-- [ ] Task: Hero Project Integration
+- [x] Task: Hero Project Integration (48f8957)
     - [ ] Implement cards/sections for `PSP-Lab` and `Security-Service-Decomposition`.
     - [ ] Add narrative sections explaining the AI-assisted workflow for these projects.
 - [ ] Task: Markdown CV Implementation
