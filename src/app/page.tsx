@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
+import MarkdownCV from "@/components/MarkdownCV";
 
 export default function Home() {
   const projects = [
@@ -108,6 +109,13 @@ export default function Home() {
             <ProjectCard key={project.title} {...project} />
           ))}
         </div>
+      </section>
+
+      {/* CV Section */}
+      <section id="cv" className="flex w-full max-w-5xl flex-col items-center py-24">
+        <p className="text-human">My Professional Record</p>
+        <h2 className="mt-2 mb-16 text-4xl font-bold text-foreground text-center">Curriculum Vitae</h2>
+        <MarkdownCV />
       </section>
 
       {/* Contact Section */}

@@ -1,6 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import Home from './page'
 
+jest.mock('react-markdown', () => {
+  return ({ children }: { children: string }) => <div>{children}</div>
+})
+
 describe('Home', () => {
   it('renders the hero section with name and role', () => {
     render(<Home />)
@@ -34,6 +38,12 @@ describe('Home', () => {
     expect(screen.getByText(/Featured Projects/i)).toBeInTheDocument()
     expect(screen.getByText('PSP-Lab')).toBeInTheDocument()
     expect(screen.getByText('Security Service Decomposition')).toBeInTheDocument()
+  })
+
+  it('renders the CV section', () => {
+    render(<Home />)
+    expect(screen.getByText(/Curriculum Vitae/i)).toBeInTheDocument()
+    expect(screen.getByText(/Loading CV.../i)).toBeInTheDocument()
   })
 
   it('renders the Contact section', () => {
