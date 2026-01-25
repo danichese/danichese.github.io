@@ -6,7 +6,7 @@
     - [ ] Configure `next.config.js` for static export (GitHub Pages compatibility).
 - [x] Task: Asset Migration (a92f62e)
     - [ ] Move existing assets from `danichese.github.io/assets` to `public/assets`.
-- [ ] Task: Global Styles & Theme
+- [x] Task: Global Styles & Theme (5d4b08d)
     - [ ] Configure Tailwind with custom colors for "Futuristic/Human" aesthetic.
 - [ ] Task: Conductor - User Manual Verification 'Foundation & Scaffolding' (Protocol in workflow.md)
 
