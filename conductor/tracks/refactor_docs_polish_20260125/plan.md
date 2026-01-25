@@ -35,7 +35,7 @@
     - [x] Verify semantic HTML structure.
 - [x] Task: Conductor - User Manual Verification 'UI/UX Polish & Animations' (Protocol in workflow.md)
 
-## Phase 4: Final Verification & Deployment
+## Phase 4: Final Verification & Deployment [checkpoint: 5b0c2de]
 - [x] Task: Run Full Test Suite
     - [x] Execute `npm test` and ensure all tests pass.
     - [x] Verify test coverage is > 80%.
