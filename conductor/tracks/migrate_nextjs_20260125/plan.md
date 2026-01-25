@@ -27,7 +27,7 @@
 - [ ] Task: Conductor - User Manual Verification 'Project Showcase & Content' (Protocol in workflow.md)
 
 ## Phase 4: Final Polish & Deployment
-- [ ] Task: SEO & Metadata Optimization.
+- [x] Task: SEO & Metadata Optimization. (d13efc4)
 - [ ] Task: Final Responsive Audit.
 - [ ] Task: Deploy to GitHub Pages.
 - [ ] Task: Conductor - User Manual Verification 'Final Polish & Deployment' (Protocol in workflow.md)

@@ -11,7 +11,7 @@ export default function Home() {
       aiNarrative: "Built entirely using the Gemini CLI and Conductor methodology. Showcases how an AI agent can autonomously scaffold, implement, and verify a full-stack project from start to finish.",
       techStack: ["Next.js", "Tailwind CSS", "TypeScript", "Conductor"],
       githubUrl: "https://github.com/danichese/portfolio-site",
-      imageUrl: "/assets/profile-pic-2.png",
+      imageUrl: "/assets/portfolio-site.png",
     },
     {
       title: "PSP-Lab",
