@@ -4,9 +4,9 @@ import AboutSection from './AboutSection'
 describe('AboutSection', () => {
   it('renders the experience and education', () => {
     render(<AboutSection />)
-    expect(screen.getByText(/About Me/i)).toBeInTheDocument()
-    expect(screen.getAllByText(/8\+ Years/i).length).toBeGreaterThan(0)
-    expect(screen.getAllByText(/App Support & Service Management/i).length).toBeGreaterThan(0)
-    expect(screen.getAllByText(/BTEC National Diploma/i).length).toBeGreaterThan(0)
+    expect(screen.getByText(/Calm systems, visible work/i)).toBeInTheDocument()
+    expect(screen.getByText(/First-principles builder/i)).toBeInTheDocument()
+    expect(screen.getByText(/Trust-focused operator/i)).toBeInTheDocument()
+    expect(screen.getByText(/Documentation-led/i)).toBeInTheDocument()
   })
 })

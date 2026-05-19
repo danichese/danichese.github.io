@@ -1,7 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import LiquidGlassCursor from "@/components/LiquidGlassCursor";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,13 +16,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dan Cheeseman | AI-Assisted Full Stack Developer",
-  description: "Portfolio of Dan Cheeseman, an AI-Assisted Full Stack Developer specializing in modern web solutions built with Gemini CLI and Conductor.",
+  metadataBase: new URL("https://danichese.github.io"),
+  title: "Dan Cheeseman | DexRoboKnix ADE",
+  description: "Dan Cheeseman is building DexRoboKnix ADE: a supervised desktop workspace for AI agents with human approval, observability, and audit trails.",
   openGraph: {
-    title: "Dan Cheeseman | AI-Assisted Full Stack Developer",
-    description: "8+ years of App Support & ITIL Management transitioned into high-velocity AI-driven product development.",
+    title: "Dan Cheeseman | DexRoboKnix ADE",
+    description: "Building trustworthy desktops for AI agents, with humans in the loop.",
     url: "https://danichese.github.io",
-    siteName: "Dan Cheeseman Portfolio",
+    siteName: "Dan Cheeseman | DexRoboKnix",
     images: [
       {
         url: "/assets/profile-pic-new.jpg",
@@ -33,10 +36,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dan Cheeseman | AI-Assisted Full Stack Developer",
-    description: "High-velocity product development using Gemini CLI and Conductor methodology.",
+    title: "Dan Cheeseman | DexRoboKnix ADE",
+    description: "Building trustworthy desktops for AI agents, with humans in the loop.",
     images: ["/assets/profile-pic-new.jpg"],
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -45,12 +53,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-site-theme="light" data-theme-mode="light" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        {children}
+        <ThemeProvider>
+          <LiquidGlassCursor />
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -4,6 +4,7 @@ import ProjectCard from './ProjectCard'
 describe('ProjectCard', () => {
   const project = {
     title: 'Test Project',
+    status: 'In progress',
     description: 'A test description',
     aiNarrative: 'AI was helpful',
     techStack: ['React', 'Next.js'],
@@ -14,6 +15,7 @@ describe('ProjectCard', () => {
   it('renders project details correctly', () => {
     render(<ProjectCard {...project} />)
     expect(screen.getByText('Test Project')).toBeInTheDocument()
+    expect(screen.getByText('In progress')).toBeInTheDocument()
     expect(screen.getByText('A test description')).toBeInTheDocument()
     expect(screen.getByText(/AI was helpful/i)).toBeInTheDocument()
     expect(screen.getByText('React')).toBeInTheDocument()

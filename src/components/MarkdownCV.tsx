@@ -20,21 +20,21 @@ const MarkdownCV = () => {
   if (!content) return <div className="animate-pulse text-zinc-500">Loading CV...</div>
 
   return (
-    <div className="w-full max-w-4xl rounded-3xl border border-white/10 bg-zinc-900/40 p-8 shadow-2xl backdrop-blur-sm md:p-12">
-      <div className="mb-8 flex flex-col items-center justify-between gap-6 border-b border-white/10 pb-8 md:flex-row no-print">
+    <div className="glass-panel w-full max-w-5xl p-6 md:p-10">
+      <div className="mb-8 flex flex-col items-center justify-between gap-6 border-b border-[var(--glass-border)] pb-8 md:flex-row no-print">
         <div className="flex items-center gap-4">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-tech/10 text-tech">
+          <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[rgb(var(--chaos-blue)/0.12)] text-blue">
             <FileText size={28} />
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-foreground">Curriculum Vitae</h3>
-            <p className="text-zinc-400">AI-Assisted Full Stack Portfolio</p>
+            <h3 className="text-2xl font-semibold text-foreground">Curriculum Vitae</h3>
+            <p className="text-muted">Builder profile and service-management record</p>
           </div>
         </div>
         <div className="flex flex-wrap justify-center gap-4">
           <button
             onClick={handlePrint}
-            className="flex items-center gap-2 rounded-full bg-human/10 px-6 py-3 font-semibold text-human transition-all hover:bg-human hover:text-black"
+            className="chaos-button"
           >
             <Printer size={20} />
             Print to PDF
@@ -42,7 +42,7 @@ const MarkdownCV = () => {
           <a
             href="/assets/cv.md"
             download="Dan-Cheeseman-CV.md"
-            className="flex items-center gap-2 rounded-full bg-tech/10 px-6 py-3 font-semibold text-tech transition-all hover:bg-tech hover:text-black"
+            className="chaos-button chaos-button--solid"
           >
             <Download size={20} />
             Download .md
@@ -50,7 +50,7 @@ const MarkdownCV = () => {
         </div>
       </div>
       
-      <div className="prose prose-invert prose-zinc max-w-none prose-headings:text-tech prose-h1:text-4xl prose-h1:font-bold prose-h1:tracking-tighter prose-h2:text-human prose-h2:border-none prose-h3:text-foreground prose-a:text-tech prose-hr:border-white/10 print:prose-zinc">
+      <div className="prose max-w-none prose-headings:text-blue prose-h1:text-4xl prose-h1:font-semibold prose-h2:text-red prose-h2:border-none prose-h3:text-foreground prose-p:text-muted prose-li:text-muted prose-strong:text-foreground prose-a:text-blue prose-hr:border-[var(--glass-border)] print:prose-zinc">
         <ReactMarkdown>{content}</ReactMarkdown>
       </div>
     </div>

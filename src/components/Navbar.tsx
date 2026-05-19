@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import ThemeToggle from './ThemeToggle'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,33 +21,38 @@ const Navbar = () => {
   }, [isOpen])
 
   const navLinks = [
+    { name: 'ADE', href: '#ade' },
     { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'CV', href: '#cv' },
     { name: 'Contact', href: '#contact' },
   ]
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/80 backdrop-blur-lg">
-      <nav className="mx-auto flex h-20 max-w-5xl items-center justify-between px-6">
-        <Link href="/" className="text-2xl font-bold tracking-tighter text-tech">
-          Dan Cheeseman
+    <header className="fixed top-0 z-50 w-full border-b border-[var(--glass-border)] bg-[var(--nav-bg)] backdrop-blur-xl">
+      <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-5 md:px-8">
+        <Link href="/" className="flex flex-col text-sm font-semibold text-foreground md:text-base">
+          <span>Dan Cheeseman</span>
+          <span className="font-mono text-[10px] font-medium uppercase text-muted md:text-xs">DexRoboKnix / ADE</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden space-x-8 md:flex">
+        <ul className="hidden items-center gap-1 md:flex">
           {navLinks.map((link) => (
             <li key={link.name}>
               <Link
                 href={link.href}
-                className="text-lg font-medium text-foreground transition-colors hover:text-tech"
+                className="rounded-lg px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-[var(--surface-soft)] hover:text-foreground"
               >
                 {link.name}
               </Link>
             </li>
           ))}
         </ul>
+
+        <div className="hidden md:block">
+          <ThemeToggle />
+        </div>
 
         {/* Mobile Hamburger Icon */}
         <button
@@ -62,7 +68,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 z-50 flex h-screen w-screen flex-col items-center justify-center bg-black transition-all duration-500 ease-in-out md:hidden ${
+        className={`fixed inset-0 z-50 flex h-screen w-screen flex-col items-center justify-center gap-10 bg-[var(--background)] transition-all duration-500 ease-in-out md:hidden ${
           isOpen ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >
@@ -71,7 +77,7 @@ const Navbar = () => {
             <li key={link.name}>
               <Link
                 href={link.href}
-                className="text-5xl font-bold tracking-tight text-foreground transition-colors hover:text-tech"
+                className="text-4xl font-semibold text-foreground transition-colors hover:text-tech"
                 onClick={toggleMenu}
               >
                 {link.name}
@@ -79,6 +85,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <ThemeToggle />
       </div>
     </header>
   )

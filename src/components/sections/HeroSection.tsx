@@ -1,70 +1,90 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as motion from "framer-motion/client";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, MonitorCheck, ShieldCheck } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section id="profile" className="flex min-h-[90vh] flex-col items-center justify-center gap-12 md:flex-row md:gap-20 py-20 md:py-0">
-      <motion.div 
-        className="relative h-64 w-64 overflow-hidden rounded-full border-4 border-tech shadow-[0_0_20px_rgba(0,242,255,0.3)] md:h-80 md:w-80"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
+    <section id="profile" className="grid min-h-[calc(100vh-6rem)] w-full max-w-6xl items-center gap-10 py-16 md:grid-cols-[1.1fr_0.9fr] md:py-20">
+      <div
+        className="flex w-full min-w-0 flex-col items-start"
       >
-        <Image
-          src="/assets/profile-pic-new.jpg"
-          alt="Dan Cheeseman"
-          fill
-          className="object-cover"
-          priority
-        />
-      </motion.div>
-      <motion.div 
-        className="flex flex-col items-center text-center md:items-start md:text-left"
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        <p className="text-xl font-medium text-human">Hello, I'm</p>
-        <h1 className="mt-2 text-5xl font-bold tracking-tight text-foreground md:text-7xl">
+        <p className="section-kicker">DexRoboKnix / Founder-builder of ADE</p>
+        <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight text-foreground sm:text-5xl md:text-7xl md:leading-none">
           Dan Cheeseman
         </h1>
-        <p className="mt-4 text-2xl font-semibold text-zinc-400">
-          AI-Assisted Full Stack Developer
+        <p className="mt-6 max-w-2xl text-xl font-medium leading-tight text-muted sm:text-2xl md:text-3xl">
+          Building trustworthy desktops for AI agents, with humans in the loop.
         </p>
-        <div className="mt-8 flex flex-col sm:flex-row flex-wrap justify-center gap-4 md:justify-start w-full sm:w-auto">
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+          ADE is a native Windows workspace that gives agents a real operating surface and gives humans permission control, live observability, and replayable audit history.
+        </p>
+        <div className="mt-8 flex w-full flex-col flex-wrap gap-3 sm:w-auto sm:flex-row">
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
+            <Link
+              href="#ade"
+              className="chaos-button chaos-button--solid w-full sm:w-auto"
+            >
+              View the ADE build
+            </Link>
+          </motion.div>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
             <Link
               href="/assets/Dan-Cheeseman-CV-INC-2024.pdf"
               target="_blank"
-              className="flex items-center justify-center rounded-full border border-tech px-8 py-3 font-semibold text-tech transition-all hover:bg-tech hover:text-black w-full sm:w-auto"
+              className="chaos-button w-full sm:w-auto"
             >
               Download CV
             </Link>
           </motion.div>
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
-            <Link
-              href="#contact"
-              className="flex items-center justify-center rounded-full bg-foreground px-8 py-3 font-semibold text-background transition-all hover:bg-zinc-300 w-full sm:w-auto"
-            >
-              Contact Info
-            </Link>
-          </motion.div>
         </div>
-        <div className="mt-8 flex gap-6 text-zinc-400">
-          <motion.div whileHover={{ scale: 1.1, rotate: 5, color: "#ffffff" }}>
+        <div className="mt-8 flex gap-5 text-muted">
+          <motion.div whileHover={{ scale: 1.1, color: "rgb(var(--chaos-blue))" }}>
             <Link href="https://www.linkedin.com/in/dan-cheeseman-b1968052/" target="_blank" aria-label="LinkedIn">
               <Linkedin size={32} />
             </Link>
           </motion.div>
-          <motion.div whileHover={{ scale: 1.1, rotate: -5, color: "#ffffff" }}>
+          <motion.div whileHover={{ scale: 1.1, color: "rgb(var(--chaos-green))" }}>
             <Link href="https://github.com/danichese" target="_blank" aria-label="GitHub">
               <Github size={32} />
             </Link>
           </motion.div>
         </div>
-      </motion.div>
+      </div>
+
+      <div
+        className="glass-panel hero-visual w-full min-w-0 p-5 md:p-6"
+      >
+        <div className="relative mx-auto h-56 w-56 overflow-hidden rounded-lg border border-[var(--glass-border)] md:h-72 md:w-72">
+          <Image
+            src="/assets/profile-pic-new.jpg"
+            alt="Dan Cheeseman"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="mt-6 grid gap-3">
+          <div className="rounded-lg border border-[var(--glass-border)] bg-[var(--surface-soft)] p-4">
+            <div className="flex items-center gap-3">
+              <MonitorCheck className="text-blue" size={20} />
+              <div>
+                <p className="font-medium text-foreground">ADE workspace</p>
+                <p className="text-sm text-muted">Native Windows surface for supervised agents</p>
+              </div>
+            </div>
+          </div>
+          <div className="rounded-lg border border-[var(--glass-border)] bg-[var(--surface-soft)] p-4">
+            <div className="flex items-center gap-3">
+              <ShieldCheck className="text-emerald" size={20} />
+              <div>
+                <p className="font-medium text-foreground">Human in the loop</p>
+                <p className="text-sm text-muted">Approvals, snapshots, event trails</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

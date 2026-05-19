@@ -12,9 +12,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        muted: "var(--muted)",
         tech: "var(--tech-accent)",
         human: "var(--human-accent)",
         space: "var(--deep-space)",
+        emerald: "rgb(var(--chaos-green))",
+        blue: "rgb(var(--chaos-blue))",
+        red: "rgb(var(--chaos-red))",
       },
     },
   },

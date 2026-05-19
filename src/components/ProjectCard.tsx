@@ -1,60 +1,88 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import * as motion from "framer-motion/client"
+import { ArrowUpRight } from 'lucide-react'
 
 interface ProjectProps {
   title: string
+  status: string
   description: string
   aiNarrative: string
   techStack: string[]
   githubUrl: string
-  imageUrl: string
+  imageUrl?: string
+  visual?: 'ade'
+  linkLabel?: string
 }
 
-const ProjectCard = ({ title, description, aiNarrative, techStack, githubUrl, imageUrl }: ProjectProps) => {
+const ProjectCard = ({
+  title,
+  status,
+  description,
+  aiNarrative,
+  techStack,
+  githubUrl,
+  imageUrl,
+  visual,
+  linkLabel = 'View on GitHub',
+}: ProjectProps) => {
   return (
-    <motion.div 
-      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-zinc-900/50 p-6"
-      whileHover={{ y: -5, borderColor: "rgba(0, 242, 255, 0.5)" }}
+    <motion.article
+      className="glass-panel group flex h-full flex-col overflow-hidden p-0"
+      whileHover={{ y: -4 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="relative mb-6 h-48 w-full overflow-hidden rounded-xl">
-        <Image
-          src={imageUrl}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-      </div>
-      <h3 className="text-2xl font-bold text-foreground">{title}</h3>
-      <p className="mt-2 text-zinc-400">{description}</p>
-      
-      <div className="mt-4 rounded-lg bg-black/30 p-4 border-l-2 border-tech">
-        <p className="text-sm font-medium text-tech">AI-Assisted Workflow:</p>
-        <p className="mt-1 text-sm italic text-zinc-300">"{aiNarrative}"</p>
-      </div>
+      {visual === 'ade' ? (
+        <div className="project-visual project-visual--ade" aria-label="ADE interface visual">
+          <span />
+          <span />
+          <span />
+        </div>
+      ) : (
+        <div className="relative h-44 w-full overflow-hidden">
+          {imageUrl && (
+            <Image
+              src={imageUrl}
+              alt={title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgb(var(--chaos-blue)/0.42)] to-transparent" />
+        </div>
+      )}
+      <div className="flex flex-1 flex-col p-5">
+        <span className="mb-4 w-fit rounded-lg border border-[var(--glass-border)] bg-[var(--surface-soft)] px-3 py-1 font-mono text-xs text-muted">
+          {status}
+        </span>
+        <h3 className="text-2xl font-semibold text-foreground">{title}</h3>
+        <p className="mt-3 text-sm leading-relaxed text-muted">{description}</p>
 
-      <div className="mt-6 flex flex-wrap gap-2">
-        {techStack.map((tech) => (
-          <span key={tech} className="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300">
-            {tech}
-          </span>
-        ))}
-      </div>
+        <div className="mt-5 rounded-lg border-l-2 border-[rgb(var(--chaos-green))] bg-[var(--surface-soft)] p-4">
+          <p className="text-sm font-medium text-emerald">Build narrative</p>
+          <p className="mt-2 text-sm leading-relaxed text-muted">{aiNarrative}</p>
+        </div>
 
-      <div className="mt-8">
-        <Link
-          href={githubUrl}
-          target="_blank"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-foreground transition-colors hover:text-tech"
-        >
-          View on GitHub
-          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
-        </Link>
+        <div className="mt-5 flex flex-wrap gap-2">
+          {techStack.map((tech) => (
+            <span key={tech} className="glass-pill">
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-auto pt-7">
+          <Link
+            href={githubUrl}
+            target="_blank"
+            className="chaos-link"
+          >
+            {linkLabel}
+            <ArrowUpRight size={16} aria-hidden="true" />
+          </Link>
+        </div>
       </div>
-    </motion.div>
+    </motion.article>
   )
 }
 

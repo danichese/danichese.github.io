@@ -5,7 +5,7 @@ describe('HeroSection', () => {
   it('renders the name and role', () => {
     render(<HeroSection />)
     expect(screen.getAllByText(/Dan Cheeseman/i).length).toBeGreaterThan(0)
-    expect(screen.getByText(/AI-Assisted Full Stack Developer/i)).toBeInTheDocument()
+    expect(screen.getByText(/Building trustworthy desktops for AI agents/i)).toBeInTheDocument()
   })
 
   it('renders the profile image', () => {

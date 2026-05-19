@@ -2,7 +2,9 @@ import { render, screen } from '@testing-library/react'
 import MarkdownCV from './MarkdownCV'
 
 jest.mock('react-markdown', () => {
-  return ({ children }: { children: string }) => <div>{children}</div>
+  const MockReactMarkdown = ({ children }: { children: string }) => <div>{children}</div>
+  MockReactMarkdown.displayName = 'MockReactMarkdown'
+  return MockReactMarkdown
 })
 
 describe('MarkdownCV', () => {
