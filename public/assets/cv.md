@@ -1,4 +1,4 @@
-# Daniel Cheeseman
+# Dan
 ## AI-Assisted Full Stack Developer
 Manchester, UK | daniel.cheeseman6@gmail.com | [LinkedIn](https://www.linkedin.com/in/dan-cheeseman-b1968052/) | [GitHub](https://github.com/danichese)
 

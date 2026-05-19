@@ -9,9 +9,9 @@ const renderNavbar = () => render(
 )
 
 describe('Navbar', () => {
-  it('renders the name Dan Cheeseman', () => {
+  it('renders the name Dan', () => {
     renderNavbar()
-    const logos = screen.getAllByText(/Dan Cheeseman/i)
+    const logos = screen.getAllByText(/^Dan$/i)
     expect(logos.length).toBeGreaterThan(0)
   })
 

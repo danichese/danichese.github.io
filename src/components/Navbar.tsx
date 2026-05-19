@@ -32,7 +32,7 @@ const Navbar = () => {
     <header className="fixed top-0 z-50 w-full border-b border-[var(--glass-border)] bg-[var(--nav-bg)] backdrop-blur-xl">
       <nav className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-5 md:px-8">
         <Link href="/" className="flex flex-col text-sm font-semibold text-foreground md:text-base">
-          <span>Dan Cheeseman</span>
+          <span>Dan</span>
           <span className="font-mono text-[10px] font-medium uppercase text-muted md:text-xs">DexRoboKnix / ADE</span>
         </Link>
 

@@ -11,7 +11,7 @@ const HeroSection = () => {
       >
         <p className="section-kicker">DexRoboKnix / Founder-builder of ADE</p>
         <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight text-foreground sm:text-5xl md:text-7xl md:leading-none">
-          Dan Cheeseman
+          Dan
         </h1>
         <p className="mt-6 max-w-2xl text-xl font-medium leading-tight text-muted sm:text-2xl md:text-3xl">
           Building trustworthy desktops for AI agents, with humans in the loop.
@@ -58,7 +58,7 @@ const HeroSection = () => {
         <div className="relative mx-auto h-56 w-56 overflow-hidden rounded-lg border border-[var(--glass-border)] md:h-72 md:w-72">
           <Image
             src="/assets/profile-pic-new.jpg"
-            alt="Dan Cheeseman"
+            alt="Dan"
             fill
             className="object-cover"
             priority

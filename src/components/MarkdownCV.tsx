@@ -41,7 +41,7 @@ const MarkdownCV = () => {
           </button>
           <a
             href="/assets/cv.md"
-            download="Dan-Cheeseman-CV.md"
+            download="Dan-CV.md"
             className="chaos-button chaos-button--solid"
           >
             <Download size={20} />

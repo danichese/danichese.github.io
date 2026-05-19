@@ -10,13 +10,13 @@ jest.mock('react-markdown', () => {
 describe('Home', () => {
   it('renders the hero section with name and role', () => {
     render(<Home />)
-    expect(screen.getAllByText(/Dan Cheeseman/i).length).toBeGreaterThan(0)
+    expect(screen.getAllByText(/^Dan$/i).length).toBeGreaterThan(0)
     expect(screen.getByText(/Building trustworthy desktops for AI agents/i)).toBeInTheDocument()
   })
 
   it('renders the profile image', () => {
     render(<Home />)
-    const img = screen.getByAltText(/Dan Cheeseman/i)
+    const img = screen.getByAltText(/^Dan$/i)
     expect(img).toBeInTheDocument()
     expect(img).toHaveAttribute('src', expect.stringContaining('profile-pic-new.jpg'))
   })

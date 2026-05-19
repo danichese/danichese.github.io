@@ -17,13 +17,13 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://danichese.github.io"),
-  title: "Dan Cheeseman | DexRoboKnix ADE",
-  description: "Dan Cheeseman is building DexRoboKnix ADE: a supervised desktop workspace for AI agents with human approval, observability, and audit trails.",
+  title: "Dan | DexRoboKnix ADE",
+  description: "Dan is building DexRoboKnix ADE: a supervised desktop workspace for AI agents with human approval, observability, and audit trails.",
   openGraph: {
-    title: "Dan Cheeseman | DexRoboKnix ADE",
+    title: "Dan | DexRoboKnix ADE",
     description: "Building trustworthy desktops for AI agents, with humans in the loop.",
     url: "https://danichese.github.io",
-    siteName: "Dan Cheeseman | DexRoboKnix",
+    siteName: "Dan | DexRoboKnix",
     images: [
       {
         url: "/assets/profile-pic-new.jpg",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dan Cheeseman | DexRoboKnix ADE",
+    title: "Dan | DexRoboKnix ADE",
     description: "Building trustworthy desktops for AI agents, with humans in the loop.",
     images: ["/assets/profile-pic-new.jpg"],
   },
