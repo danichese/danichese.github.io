@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Cheeseman - Application Support & Service Delivery Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+            color: #e0e7ff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            border: 1px solid rgba(96, 165, 250, 0.2);
+            border-radius: 16px;
+            padding: 50px 40px;
+            margin-bottom: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .name {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .title {
+            font-size: 20px;
+            color: #bfdbfe;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        .contact-item i {
+            color: #60a5fa;
+            font-size: 16px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: rgba(59, 130, 246, 0.2);
+            border: 1.5px solid #60a5fa;
+            color: #93c5fd;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cta-btn:hover {
+            background: #3b82f6;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+        }
+
+        /* ===== SECTION ===== */
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #f0f9ff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+            padding-bottom: 12px;
+        }
+
+        .section-title i {
+            color: #60a5fa;
+            font-size: 28px;
+        }
+
+        /* ===== SKILLS GRID ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(96, 165, 250, 0.15);
+            border-radius: 12px;
+            padding: 24px;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            border-color: rgba(96, 165, 250, 0.4);
+            background: rgba(30, 58, 138, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .skill-category-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #93c5fd;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            color: #bfdbfe;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(59, 130, 246, 0.3);
+            border-color: #60a5fa;
+            color: #fff;
+        }
+
+        /* ===== EXPERIENCE CARDS ===== */
+        .experience-timeline {
+            position: relative;
+            padding-left: 0;
+        }
+
+        .experience-card {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(96, 165, 250, 0.15);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 24px;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+            border-left: 4px solid #60a5fa;
+        }
+
+        .experience-card:hover {
+            border-color: rgba(96, 165, 250, 0.4);
+            background: rgba(30, 58, 138, 0.2);
+            transform: translateX(8px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+        }
+
+        .experience-header {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 16px;
+            margin-bottom: 12px;
+            align-items: flex-start;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #93c5fd;
+        }
+
+        .company-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: #cbd5e1;
+            margin-top: 4px;
+        }
+
+        .job-period {
+            background: rgba(59, 130, 246, 0.15);
+            color: #93c5fd;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .achievement-list {
+            list-style: none;
+            margin-top: 16px;
+        }
+
+        .achievement-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+
+        .achievement-item i {
+            color: #34d399;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        /* ===== STATS ===== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .stat-card {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(96, 165, 250, 0.15);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            border-color: rgba(96, 165, 250, 0.4);
+            background: rgba(30, 58, 138, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #cbd5e1;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== EDUCATION ===== */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .education-card {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(96, 165, 250, 0.15);
+            border-radius: 12px;
+            padding: 24px;
+            backdrop-filter: blur(8px);
+        }
+
+        .education-card h4 {
+            color: #93c5fd;
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: #cbd5e1;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(96, 165, 250, 0.2);
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .footer-icon {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+
+        .footer-icon:hover {
+            color: #93c5fd;
+            transform: translateY(-4px);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .header-content {
+                grid-template-columns: 1fr;
+            }
+
+            .name {
+                font-size: 32px;
+            }
+
+            .title {
+                font-size: 16px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-header {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .highlight {
+            color: #34d399;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-content">
+                <div>
+                    <h1 class="name">Daniel Cheeseman</h1>
+                    <p class="title">Application Support & Service Delivery Analyst</p>
+                    <p style="color: #94a3b8; font-size: 14px; margin-bottom: 16px;">FinTech • Financial Services • Higher Education • Enterprise IT</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Manchester, UK
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            07466 102224
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            daniel.cheeseman6@gmail.com
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="https://www.linkedin.com/in/dan-cheeseman-b1968052/" class="cta-btn" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn Profile
+                        </a>
+                        <a href="mailto:daniel.cheeseman6@gmail.com" class="cta-btn">
+                            <i class="fas fa-envelope"></i> Get In Touch
+                        </a>
+                    </div>
+                </div>
+                <div class="stats-grid" style="margin-bottom: 0; min-width: 200px;">
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Core Industries</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROFESSIONAL SUMMARY -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-briefcase"></i> Professional Overview
+            </h2>
+            <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(96, 165, 250, 0.15); border-radius: 12px; padding: 28px; backdrop-filter: blur(8px);">
+                <p style="color: #cbd5e1; line-height: 1.8; font-size: 15px;">
+                    Accomplished Application Support and Service Delivery Analyst with <span class="highlight">5+ years</span> of progressive experience delivering enterprise-grade technical support across FinTech, financial services and higher education. Specialises in <span class="highlight">2nd/3rd line troubleshooting</span>, incident resolution and knowledge management within regulated environments. Expert in REST API debugging, payment gateway integrations, and cloud infrastructure support across Microsoft Azure and enterprise platforms. Known for translating complex technical issues into sustainable solutions through <span class="highlight">root cause analysis</span>, structured documentation and cross-functional collaboration.
+                </p>
+            </div>
+        </div>
+
+        <!-- CORE COMPETENCIES -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-code"></i> Core Competencies
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-title">
+                        <i class="fas fa-network-wired"></i> API & Integration
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">JSON/XML</span>
+                        <span class="skill-tag">Payment Gateways</span>
+                        <span class="skill-tag">3DS Auth</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">
+                        <i class="fas fa-exclamation-triangle"></i> Incident Management
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Root Cause</span>
+                        <span class="skill-tag">Problem Mgmt</span>
+                        <span class="skill-tag">SLA Management</span>
+                        <span class="skill-tag">On-Call Response</span>
+                        <span class="skill-tag">Escalation</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">
+                        <i class="fas fa-cloud"></i> Cloud & Infrastructure
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Azure Portal</span>
+                        <span class="skill-tag">Entra ID</span>
+                        <span class="skill-tag">Microsoft 365</span>
+                        <span class="skill-tag">VDI Support</span>
+                        <span class="skill-tag">Intune</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">
+                        <i class="fas fa-database"></i> Data & Reporting
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Custom Reports</span>
+                        <span class="skill-tag">Analytics</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">
+                        <i class="fas fa-book"></i> Service Management
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ITIL v3/v4</span>
+                        <span class="skill-tag">NIST CSF</span>
+                        <span class="skill-tag">SABSA</span>
+                        <span class="skill-tag">ServiceNow</span>
+                        <span class="skill-tag">SOPs</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-title">
+                        <i class="fas fa-lock"></i> Security & Compliance
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PCI DSS</span>
+                        <span class="skill-tag">Access Mgmt</span>
+                        <span class="skill-tag">Compliance</span>
+                        <span class="skill-tag">Documentation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-history"></i> Professional Experience
+            </h2>
+            <div class="experience-timeline">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Security Service Owner & Technical Writer</div>
+                            <div class="company-name">University of Manchester</div>
+                        </div>
+                        <div class="job-period">Sept 2024 - Oct 2025</div>
+                    </div>
+                    <ul class="achievement-list">
+                        <li class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            Architected <span class="highlight">3-layer Security Service Catalogue</span> mapping 12 core applications to NIST CSF 2.0 framework
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            Engineered <span class="highlight">Power BI visualisation layer</span> translating technical definitions into executive dashboards
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            Developed comprehensive RACI matrices capturing technical ownership and escalation paths
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            Facilitated <span class="highlight">20+ technical workshops</span> with security teams to capture knowledge and validate definitions
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Senior Client Support (Team Lead)</div>
+                            <div class="company-name">Total Processing</div>
+                        </div>
+                        <div class="job-period">Aug 2022 - Dec 2023</div>
+                    </div>
+                    <ul class="achievement-list">
+                        <li class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            Led root cause investigation into systemic 3DS authentication failure, improving <span class="highlight">transaction approval rates from 76% to 93%</span>
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            Designed error classification framework that reduced resolution time by <span class="highlight">25%</span>
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            Reduced merchant onboarding time by <span class="highlight">30%</span> through standardised documentation and self-service KB
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            Built library of reusable SQL query templates, reducing reporting turnaround from 2 days to same-day
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Documentation Specialist</div>
+                            <div class="company-name">Bank of America</div>
+                        </div>
+                        <div class="job-period">Dec 2020 - Apr 2022</div>
+                    </div>
+                    <ul class="achievement-list">
+                        <li class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            Led technical support for <span class="highlight">VDI migration of 500+ users</span> with real-time cutover support
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            Authored <span class="highlight">40+ Standard Operating Procedures</span> for Global Service Desk
+                        </li>
+                        <li class="achievement-item">
+                            <i class="fas fa-check-circle"></i>
+                            Migrated 200+ knowledge articles from BMC Remedy to KMS Lighthouse, improving discoverability by <span class="highlight">35%</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDUCATION & CERTIFICATIONS -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-graduation-cap"></i> Education & Certifications
+            </h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h4>ITIL v3 Foundation</h4>
+                    <p>Service Management Best Practices</p>
+                </div>
+                <div class="education-card">
+                    <h4>NIST CSF 2.0</h4>
+                    <p>Cybersecurity Framework Training</p>
+                </div>
+                <div class="education-card">
+                    <h4>Microsoft 365 Administration</h4>
+                    <p>Cloud Services & Identity Management</p>
+                </div>
+                <div class="education-card">
+                    <h4>BTEC National Diploma - ICT</h4>
+                    <p>Stockport College</p>
+                </div>
+                <div class="education-card">
+                    <h4>GCSEs (8 Subjects)</h4>
+                    <p>St James Roman Catholic High School</p>
+                </div>
+                <div class="education-card">
+                    <h4>SABSA Architecture</h4>
+                    <p>Applied Business Security Architecture</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- KEY ACHIEVEMENTS -->
+        <div class="section">
+            <h2 class="section-title">
+                <i class="fas fa-star"></i> Key Achievements
+            </h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+                <div style="background: rgba(52, 211, 153, 0.1); border-left: 4px solid #34d399; border-radius: 8px; padding: 20px;">
+                    <h4 style="color: #34d399; margin-bottom: 8px;">93% Improvement</h4>
+                    <p style="color: #cbd5e1; font-size: 14px;">Elevated transaction approval rates from 76% to 93% through systematic root cause investigation</p>
+                </div>
+                <div style="background: rgba(52, 211, 153, 0.1); border-left: 4px solid #34d399; border-radius: 8px; padding: 20px;">
+                    <h4 style="color: #34d399; margin-bottom: 8px;">30% Faster Onboarding</h4>
+                    <p style="color: #cbd5e1; font-size: 14px;">Reduced merchant onboarding time through standardised documentation and self-service resources</p>
+                </div>
+                <div style="background: rgba(52, 211, 153, 0.1); border-left: 4px solid #34d399; border-radius: 8px; padding: 20px;">
+                    <h4 style="color: #34d399; margin-bottom: 8px;">40+ SOPs Authored</h4>
+                    <p style="color: #cbd5e1; font-size: 14px;">Created comprehensive operational procedures establishing consistent incident handling across regions</p>
+                </div>
+                <div style="background: rgba(52, 211, 153, 0.1); border-left: 4px solid #34d399; border-radius: 8px; padding: 20px;">
+                    <h4 style="color: #34d399; margin-bottom: 8px;">35% Better Discoverability</h4>
+                    <p style="color: #cbd5e1; font-size: 14px;">Improved knowledge article accessibility through structured information architecture migration</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>💡 Ready to discuss how I can streamline your IT operations and service delivery</p>
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/dan-cheeseman-b1968052/" class="footer-icon" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:daniel.cheeseman6@gmail.com" class="footer-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p style="margin-top: 20px; font-size: 12px; color: #64748b;">Last updated: July 2026 | IT Professional Portfolio</p>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Track page interactions
+        document.querySelectorAll('.cta-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                console.log('CTA clicked:', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>
